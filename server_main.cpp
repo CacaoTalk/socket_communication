@@ -45,9 +45,9 @@ int main(void) {
         exit(EXIT_FAILURE);
     }
     // accept
-    if (newSocket
+    if ((newSocket
          = accept(socketNum, (struct sockaddr*)&address,
-                  (socklen_t *)&addrlen)
+                  (socklen_t*)&addrlen))
         < 0) {
         perror("accept");
         exit(EXIT_FAILURE);
